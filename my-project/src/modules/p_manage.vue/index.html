@@ -1,0 +1,56 @@
+<div :class="$style.root">
+	<u-grid-row :gaps="10">
+		<u-grid-column :offset="1">
+			<el-input v-model="id">
+				 <template slot="prepend">id</template>
+			</el-input>
+		</u-grid-column>
+		<u-grid-column>
+			<el-input v-model="name">
+				 <template slot="prepend">name</template>
+			</el-input>
+		</u-grid-column>
+		<u-grid-column>
+			<el-input v-model="property">
+				 <template slot="prepend">property</template>
+			</el-input>
+		</u-grid-column>
+	</u-grid-row>
+	<u-grid-row :gaps="10">
+		<u-grid-column :offset="1">
+			<el-button @click="__get">getUsers</el-button>
+		</u-grid-column>
+		<u-grid-column>
+			<el-button @click="__save">saveUsers</el-button>
+		</u-grid-column>
+		<u-grid-column>
+			<el-button @click="__update">updateUsers</el-button>
+		</u-grid-column>
+		<u-grid-column>
+			<el-button @click="__delete">deleteUsers</el-button>
+		</u-grid-column>
+	</u-grid-row>
+	<u-grid-row>
+		<u-grid-column :span="12"  :offset="1">
+			<el-table
+		      :data="__users">
+		      <el-table-column
+		        prop="_id"
+		        label="_id">
+		      </el-table-column>
+		      <el-table-column
+		        prop="id"
+		        label="id">
+		      </el-table-column>
+		      <el-table-column
+		        prop="name"
+		        label="name">
+		      </el-table-column>
+		      <el-table-column
+		        prop="property"
+		        label="property">
+		      </el-table-column>
+		    </el-table>
+		</u-grid-column>
+	</u-grid-row>
+</div>
