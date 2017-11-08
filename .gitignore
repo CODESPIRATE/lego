@@ -1,3 +1,11 @@
 .DS_Store
 node_modules/
 npm-debug.log
+*.png
+server/upload/abc
+server/upload/picture1507797149435
+server/upload/picture1507797296289
+server/upload/picture1507797404559
+server/upload/picture1507797643787
+server/upload/picture1507797774117
+server/upload/upload_e64fcefe94abe206a7335023c43b48c3.jpg
