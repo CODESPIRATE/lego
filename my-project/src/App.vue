@@ -1,6 +1,6 @@
 <template>
 <div :class="$style.root">
-    <u-layout :mode="1" :left-width="siderWidth" :left-background="siderColor">
+    <u-layout :mode="2" :left-width="siderWidth" :left-background="siderColor" :fixSide="true">
 		<div slot="header">
 			<div :class="$style.sider">
 			    <navigation></navigation>

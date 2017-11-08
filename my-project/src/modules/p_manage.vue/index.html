@@ -15,6 +15,27 @@
 				 <template slot="prepend">property</template>
 			</el-input>
 		</u-grid-column>
+		<u-grid-column>
+			<el-input v-model="desc">
+				 <template slot="prepend">desc</template>
+			</el-input>
+		</u-grid-column>
+	</u-grid-row>
+	<u-grid-row  :gaps="10">
+		<u-grid-column  :offset="1">
+			<el-upload
+			  ref="upload"
+			  :action="uploadServer"
+			  :file-list="fileList"
+			  :drag="true"
+			  :before-upload="beforeUpload"
+			  :on-success="uploaded"
+			  :multiple="false"
+			  name="picture"
+			  list-type="picture-card">
+			  <i class="el-icon-plus"></i>
+			</el-upload>
+		</u-grid-column>
 	</u-grid-row>
 	<u-grid-row :gaps="10">
 		<u-grid-column :offset="1">
@@ -30,6 +51,7 @@
 			<el-button @click="__delete">deleteUsers</el-button>
 		</u-grid-column>
 	</u-grid-row>
+	
 	<u-grid-row>
 		<u-grid-column :span="12"  :offset="1">
 			<el-table
@@ -49,6 +71,14 @@
 		      <el-table-column
 		        prop="property"
 		        label="property">
+		      </el-table-column>
+		      <el-table-column
+		        prop="desc"
+		        label="desc">
+		      </el-table-column>
+		      <el-table-column
+		        prop="picture"
+		        label="picture">
 		      </el-table-column>
 		    </el-table>
 		</u-grid-column>

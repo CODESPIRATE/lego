@@ -1,1 +1,45 @@
-<div>{{overview}}</div>
+<div :class="$style.root">
+	<u-tabs :index="0">
+	    <u-tab title="TabA">
+	    	<!-- <my-input persistKey='persist_1'></my-input> -->
+	    	<!-- <c-input persistKey='persist_1'></c-input> -->
+	    	<u-form ref="form" :rules="rules" persistKey="f1">
+			    <u-form-item title="用户名" name="username">
+			        <u-input size="huge" v-model="model.username" maxlength="12" placeholder="4~12个字符"></u-input>
+			    </u-form-item>
+			    <u-form-item title="邮箱" name="email">
+			        <u-input size="huge" v-model="model.email" maxlength="24" placeholder="请输入邮箱"></u-input>
+			    </u-form-item>
+			    <u-form-item title="手机号码" name="phone">
+			        <u-input size="huge" v-model="model.phone" :disablePersist="true" maxlength="11" placeholder="请输入手机号码"></u-input>
+			    </u-form-item>
+			    <u-form-item>
+			        <u-button color="primary" @click="submit()">提交</u-button>
+			    </u-form-item>
+			</u-form>
+	    </u-tab>
+	    <u-tab title="TabB">
+	    	<!-- <my-input persistKey='persist_2'></my-input> -->
+	    	<u-form ref="form" :rules="rules" persistKey="f2">
+			    <u-form-item title="用户名">
+			        <u-input size="huge" maxlength="12" :disablePersist="true" placeholder="4~12个字符"></u-input>
+			    </u-form-item>
+			    <u-form-item title="邮箱">
+			        <u-input size="huge" maxlength="24" placeholder="请输入邮箱"></u-input>
+			    </u-form-item>
+			    <u-form-item title="手机号码">
+			        <u-input size="huge" maxlength="11" placeholder="请输入手机号码"></u-input>
+			    </u-form-item>
+			    <u-form-item>
+			        <u-button color="primary" @click="submit()">提交</u-button>
+			    </u-form-item>
+			</u-form>
+	    </u-tab>
+	    <u-tab title="TabC">
+	    	<!-- <my-input persistKey='persist_3'></my-input> -->
+	    	<u-input persistKey='u-input'></u-input>
+	    	<u-checkbox v-model="value" persistKey='u-checkbox'>{{ value }}</u-checkbox>
+	    	<u-textarea placeholder="Details" persistKey='u-textarea' :disablePersist="true" ></u-textarea>
+	    </u-tab>
+	</u-tabs>
+</div>

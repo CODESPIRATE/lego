@@ -146,7 +146,18 @@
     </div>
 </u-layout>
 ```
-
+### 固定侧边栏
+``` html
+<div style="height:300px">
+	<u-layout :mode="2" left-width="200px" left-background="#579af5" right-width="200px" right-background="#579af5" :fixSide="true">
+		<div slot="header" style="width:960px;padding:16px;background: #67aaf5;">Header</div>
+		<div slot="left" style="background: #579af5;">left</div>
+		<div slot="right" style="background: #579af5;">right</div>
+		<div slot="content" style="background: #78baf5;min-height:200px">content</div>
+		<div slot="footer" style="width:960px;padding:16px;background: #878ad5;">footer</div>
+	</u-layout>
+</div>
+```
 ## Layout API
 ### Attrs/Props
 
@@ -156,3 +167,4 @@
 | siderDirection | String | `row` | 侧边栏宽度排列方向 |
 | siderBackground | String | `undefined` | 侧边栏背景色 |
 | mode | Number | `1` | 布局模式 |
+| fixSide | Boolean | `false` | 是否固定侧边栏 |

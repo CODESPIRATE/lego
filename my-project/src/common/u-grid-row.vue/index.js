@@ -7,10 +7,6 @@ export default {
 			type:Number,
 			default:24
 		},
-		// columns:{
-		// 	type:String,
-		// 	default:undefined
-		// },
 		gaps:{
 			type:Number,
 			default:0
@@ -30,15 +26,6 @@ export default {
 		}
 	},
 	computed:{
-		// columnsInfo() {
-		// 	if (this.columns) {
-		// 		if(/\s+/.test(this.columns)) {
-		// 			return this.columns.split(" ");
-		// 		} else {
-		// 			return this.columns;
-		// 		}
-		// 	}
-		// },
 		gapsStyleObject() {
 			return {
 				marginLeft:"-" + this.gaps/2 + "px",
@@ -52,9 +39,5 @@ export default {
 				return this.gapsStyleObject
 			}
 		}
-		// unit() {
-		// 	if(/\%/.test(this.columns)) return "%";
-		// 	else return "px";
-		// }
 	}
 }

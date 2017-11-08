@@ -22,15 +22,22 @@ export default {
 		mode:{
 			type:Number,
 			default:1
+		},
+		fixSide:{
+			type:Boolean,
+			default:false
 		}
 	},
 	data(){
 		return {
-
+			
 		}
 	},
 	mixins:[Flex],
 	computed:{
+		fixHeight() {
+			return this.fixSide ? "100%" : "auto";
+		},
 		unit() {
 			if(/\%/.test(this.leftWidth) || /\%/.test(this.rightWidth)) return "%";
 			else return "px";

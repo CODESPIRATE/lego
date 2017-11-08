@@ -5,8 +5,8 @@ module.exports = {
         entry: {
             bundle: './src/index.js',
         },
-        output: {
-        	publicPath: '/public/',
+        output:{
+        	publicPath:'/public/',
         },
         module: {
 			EXTENDS: true,
@@ -32,11 +32,12 @@ module.exports = {
 			        }
 		    	}
 			]
-		}
+		},
+		devtool:'#cheap-module-source-map',
     },
     webpackDevServer:{
     	contentBase: __dirname,
     	publicPath: "/public/",
-    	port:1638
+    	port:1638,
     }
 }
